@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AccountMemoModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Account">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="Int32" />
+    <Property Name="Username" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Password" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="UserStore" Relationship="Self.FK__Account__UserId__29572725" FromRole="Account" ToRole="UserStore" />
+    <NavigationProperty Name="UserStores" Relationship="Self.UserStore_Account_FK" FromRole="Account" ToRole="UserStore" />
+  </EntityType>
+  <EntityType Name="UserStore">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AccountId" Type="Int32" />
+    <Property Name="Name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Age" Type="Int32" />
+    <Property Name="App_Password" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Accounts" Relationship="Self.FK__Account__UserId__29572725" FromRole="UserStore" ToRole="Account" />
+    <NavigationProperty Name="Account" Relationship="Self.UserStore_Account_FK" FromRole="UserStore" ToRole="Account" />
+  </EntityType>
+  <Association Name="FK__Account__UserId__29572725">
+    <End Role="UserStore" Type="Self.UserStore" Multiplicity="0..1" />
+    <End Role="Account" Type="Self.Account" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserStore">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Account">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="UserStore_Account_FK">
+    <End Role="Account" Type="Self.Account" Multiplicity="0..1" />
+    <End Role="UserStore" Type="Self.UserStore" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Account">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="UserStore">
+        <PropertyRef Name="AccountId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="AccountMemoEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Accounts" EntityType="Self.Account" />
+    <EntitySet Name="UserStores" EntityType="Self.UserStore" />
+    <AssociationSet Name="FK__Account__UserId__29572725" Association="Self.FK__Account__UserId__29572725">
+      <End Role="UserStore" EntitySet="UserStores" />
+      <End Role="Account" EntitySet="Accounts" />
+    </AssociationSet>
+    <AssociationSet Name="UserStore_Account_FK" Association="Self.UserStore_Account_FK">
+      <End Role="Account" EntitySet="Accounts" />
+      <End Role="UserStore" EntitySet="UserStores" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

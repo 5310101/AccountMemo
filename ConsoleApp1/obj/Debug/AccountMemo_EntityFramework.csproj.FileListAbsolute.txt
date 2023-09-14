@@ -1,0 +1,12 @@
+C:\Users\nguye\OneDrive\Desktop\AccountMemo\ConsoleApp1\obj\Debug\AccountMemo_EntityFramework.csproj.AssemblyReference.cache
+C:\Users\nguye\OneDrive\Desktop\AccountMemo\ConsoleApp1\obj\Debug\AccountMemo_EntityFramework.csproj.CoreCompileInputs.cache
+C:\Users\nguye\OneDrive\Desktop\AccountMemo\ConsoleApp1\bin\Debug\ConsoleApp1.exe.config
+C:\Users\nguye\OneDrive\Desktop\AccountMemo\ConsoleApp1\bin\Debug\ConsoleApp1.exe
+C:\Users\nguye\OneDrive\Desktop\AccountMemo\ConsoleApp1\bin\Debug\ConsoleApp1.pdb
+C:\Users\nguye\OneDrive\Desktop\AccountMemo\ConsoleApp1\bin\Debug\EntityFramework.dll
+C:\Users\nguye\OneDrive\Desktop\AccountMemo\ConsoleApp1\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\nguye\OneDrive\Desktop\AccountMemo\ConsoleApp1\bin\Debug\EntityFramework.xml
+C:\Users\nguye\OneDrive\Desktop\AccountMemo\ConsoleApp1\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\nguye\OneDrive\Desktop\AccountMemo\ConsoleApp1\obj\Debug\AccountMemo_EntityFramework.csproj.CopyComplete
+C:\Users\nguye\OneDrive\Desktop\AccountMemo\ConsoleApp1\obj\Debug\ConsoleApp1.exe
+C:\Users\nguye\OneDrive\Desktop\AccountMemo\ConsoleApp1\obj\Debug\ConsoleApp1.pdb
