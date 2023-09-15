@@ -9,22 +9,12 @@ using System.Threading.Tasks;
 
 namespace AccountMemo_EFCore.Services
 {
-    public class UserService
+    public class UserService : GenericServices<UserStore>
     {
         private readonly AccountMemoContextFactory _contextFactory;
-        public UserService(AccountMemoContextFactory contextFactory)
+        public UserService(AccountMemoContextFactory contextFactory) : base(contextFactory)
         {
             _contextFactory = contextFactory;
-        }
-
-        public async Task<UserStore> Create(UserStore entity)
-        {
-            using (AccountMemoContext context = _contextFactory.CreateDbContext())
-            {
-                await context.UserStores.AddAsync(entity);
-                await context.SaveChangesAsync();
-                return entity;
-            }
         }
 
         public async Task<UserStore> Get(int Id)
@@ -45,26 +35,6 @@ namespace AccountMemo_EFCore.Services
                     Include(x => x.Name).
                     Include(x => x.Accounts).ToListAsync(); 
                 return entity;  
-            }
-        }
-
-        public async Task Update(int id, UserStore entity)
-        {
-            using (AccountMemoContext context = _contextFactory.CreateDbContext())
-            {
-                entity.Id = id;
-                context.UserStores.Update(entity);
-                await context.SaveChangesAsync();
-            }
-        }
-
-        public async Task Delete(int id)
-        {
-            using (AccountMemoContext context = _contextFactory.CreateDbContext())
-            {
-                UserStore entity = await context.UserStores.FirstOrDefaultAsync(x => x.Id == id);
-                context.UserStores.Remove(entity);
-                await context.SaveChangesAsync();
             }
         }
     }
