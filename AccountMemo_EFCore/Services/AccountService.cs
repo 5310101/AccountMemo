@@ -1,5 +1,7 @@
-﻿using AccountMemo_EFCore.Models;
+﻿using AccountMemo_Domain.Models;
+using AccountMemo_Domain.Services;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Identity.Client;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace AccountMemo_EFCore.Services
 {
-    public class AccountService : GenericServices<Account>
+    public class AccountService : GenericServices<Account>, IAccountService
     {
         private AccountMemoContextFactory _contextFactory;
        

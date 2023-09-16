@@ -1,7 +1,10 @@
 ﻿using System;
+using AccountMemo_Console.Services;
 using AccountMemo_EFCore;
+using AccountMemo_EFCore.Services;
 using Microsoft.EntityFrameworkCore.Metadata.Conventions;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace AccountMemo_Console
     
@@ -13,7 +16,8 @@ namespace AccountMemo_Console
         {
             IConfiguration configuration = BuildConfiguration();
             var connectionString = configuration.GetConnectionString("connectStr");
-            GeneralLibrary library = new GeneralLibrary();
+            IServiceProvider services = CreateServiceProvider();
+            
             try
             {
                 ("=========== ACCOUNT MEMO ===========").Title_Display();
@@ -25,7 +29,7 @@ namespace AccountMemo_Console
                     switch(command.ToLower())
                     {
                         case "user_all":
-
+                            
                             break;
                         case "":
 
@@ -37,13 +41,20 @@ namespace AccountMemo_Console
             }
             catch (Exception)
             {
-
                 throw;
             }
             
         }
 
        
+        public static IServiceProvider CreateServiceProvider()
+        {
+            IServiceCollection services = new ServiceCollection();
+            services.AddSingleton<IDataService, GenericServices>();
+            services.AddSingleton<IUserService, UserService>();
+
+            return services.BuildServiceProvider();
+        }
 
         public static IConfigurationRoot BuildConfiguration()
         {

@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AccountMemo_EFCore.Models
+namespace AccountMemo_Domain.Services
 {
-    public class BaseModel
+    public interface IAccountService
     {
-        public int Id { get; set; } 
+
     }
 }

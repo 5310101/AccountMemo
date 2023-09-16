@@ -87,3 +87,4 @@ C:\Users\quanna\Source\Repos\AccountMemo\AccountMemo_Console\obj\Debug\net7.0\re
 C:\Users\quanna\Source\Repos\AccountMemo\AccountMemo_Console\obj\Debug\net7.0\AccountMemo_Console.pdb
 C:\Users\quanna\Source\Repos\AccountMemo\AccountMemo_Console\obj\Debug\net7.0\AccountMemo_Console.genruntimeconfig.cache
 C:\Users\quanna\Source\Repos\AccountMemo\AccountMemo_Console\obj\Debug\net7.0\ref\AccountMemo_Console.dll
+C:\Users\quanna\Source\Repos\AccountMemo\AccountMemo_Console\bin\Debug\net7.0\appsettings.json

@@ -1,0 +1,4 @@
+C:\Users\quanna\Source\Repos\AccountMemo\AccountMemo_Domain\obj\Debug\net7.0\AccountMemo_Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\quanna\Source\Repos\AccountMemo\AccountMemo_Domain\obj\Debug\net7.0\AccountMemo_Domain.AssemblyInfoInputs.cache
+C:\Users\quanna\Source\Repos\AccountMemo\AccountMemo_Domain\obj\Debug\net7.0\AccountMemo_Domain.AssemblyInfo.cs
+C:\Users\quanna\Source\Repos\AccountMemo\AccountMemo_Domain\obj\Debug\net7.0\AccountMemo_Domain.csproj.CoreCompileInputs.cache

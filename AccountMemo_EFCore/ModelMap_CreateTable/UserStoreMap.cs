@@ -1,4 +1,4 @@
-﻿using AccountMemo_EFCore.Models;
+﻿using AccountMemo_Domain.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;

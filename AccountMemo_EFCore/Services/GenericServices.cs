@@ -1,4 +1,5 @@
-﻿using AccountMemo_EFCore.Models;
+﻿using AccountMemo_Domain.Services;
+using AccountMemo_Domain.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 using System;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace AccountMemo_EFCore.Services
 {
-    public class GenericServices<T> where T : BaseModel
+    public class GenericServices<T> : IDataService<T>  where T : BaseModel 
     {
         private AccountMemoContextFactory _contextFactory;
         public GenericServices(AccountMemoContextFactory contextFactory)

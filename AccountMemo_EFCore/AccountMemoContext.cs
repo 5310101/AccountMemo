@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using AccountMemo_Domain.Models;
 using AccountMemo_EFCore.ModelMap_CreateTable;
-using AccountMemo_EFCore.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace AccountMemo_EFCore;

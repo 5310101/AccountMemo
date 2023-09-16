@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace AccountMemo_EFCore.Models;
+namespace AccountMemo_Domain.Models;
 
 public partial class Account : BaseModel
 {

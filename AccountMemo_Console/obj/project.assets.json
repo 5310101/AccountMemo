@@ -1393,10 +1393,21 @@
           }
         }
       },
+      "AccountMemo_Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/AccountMemo_Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AccountMemo_Domain.dll": {}
+        }
+      },
       "AccountMemo_EFCore/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
+          "AccountMemo_Domain": "1.0.0",
           "Microsoft.EntityFrameworkCore": "7.0.11",
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.11"
         },
@@ -3640,6 +3651,11 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "AccountMemo_Domain/1.0.0": {
+      "type": "project",
+      "path": "../AccountMemo_Domain/AccountMemo_Domain.csproj",
+      "msbuildProject": "../AccountMemo_Domain/AccountMemo_Domain.csproj"
+    },
     "AccountMemo_EFCore/1.0.0": {
       "type": "project",
       "path": "../AccountMemo_EFCore/AccountMemo_EFCore.csproj",
@@ -3648,6 +3664,7 @@
   },
   "projectFileDependencyGroups": {
     "net7.0": [
+      "AccountMemo_Domain >= 1.0.0",
       "AccountMemo_EFCore >= 1.0.0",
       "Microsoft.Extensions.Configuration >= 7.0.0",
       "Microsoft.Extensions.Hosting >= 7.0.1"
@@ -3691,6 +3708,9 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
+            "C:\\Users\\quanna\\Source\\Repos\\AccountMemo\\AccountMemo_Domain\\AccountMemo_Domain.csproj": {
+              "projectPath": "C:\\Users\\quanna\\Source\\Repos\\AccountMemo\\AccountMemo_Domain\\AccountMemo_Domain.csproj"
+            },
             "C:\\Users\\quanna\\Source\\Repos\\AccountMemo\\AccountMemo_EFCore\\AccountMemo_EFCore.csproj": {
               "projectPath": "C:\\Users\\quanna\\Source\\Repos\\AccountMemo\\AccountMemo_EFCore\\AccountMemo_EFCore.csproj"
             }
