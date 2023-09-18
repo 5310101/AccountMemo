@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AccountMemo_Domain.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,8 @@ namespace AccountMemo_Domain.Services
 {
     public interface IAccountService
     {
-
+        Task<IEnumerable<Account>> GetAllAccount(int userId);
+        Task<Account> GetAccountById(int AccountId);
+        Task<IEnumerable<Account>> GetAccountByName(string Name);
     }
 }

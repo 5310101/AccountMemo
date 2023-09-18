@@ -2,3 +2,10 @@ C:\Users\quanna\Source\Repos\AccountMemo\AccountMemo_Domain\obj\Debug\net7.0\Acc
 C:\Users\quanna\Source\Repos\AccountMemo\AccountMemo_Domain\obj\Debug\net7.0\AccountMemo_Domain.AssemblyInfoInputs.cache
 C:\Users\quanna\Source\Repos\AccountMemo\AccountMemo_Domain\obj\Debug\net7.0\AccountMemo_Domain.AssemblyInfo.cs
 C:\Users\quanna\Source\Repos\AccountMemo\AccountMemo_Domain\obj\Debug\net7.0\AccountMemo_Domain.csproj.CoreCompileInputs.cache
+C:\Users\quanna\source\repos\AccountMemo\AccountMemo_Domain\bin\Debug\net7.0\AccountMemo_Domain.deps.json
+C:\Users\quanna\source\repos\AccountMemo\AccountMemo_Domain\bin\Debug\net7.0\AccountMemo_Domain.dll
+C:\Users\quanna\source\repos\AccountMemo\AccountMemo_Domain\bin\Debug\net7.0\AccountMemo_Domain.pdb
+C:\Users\quanna\source\repos\AccountMemo\AccountMemo_Domain\obj\Debug\net7.0\AccountMemo_Domain.dll
+C:\Users\quanna\source\repos\AccountMemo\AccountMemo_Domain\obj\Debug\net7.0\refint\AccountMemo_Domain.dll
+C:\Users\quanna\source\repos\AccountMemo\AccountMemo_Domain\obj\Debug\net7.0\AccountMemo_Domain.pdb
+C:\Users\quanna\source\repos\AccountMemo\AccountMemo_Domain\obj\Debug\net7.0\ref\AccountMemo_Domain.dll

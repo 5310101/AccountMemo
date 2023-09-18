@@ -2908,11 +2908,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\quanna\\Source\\Repos\\AccountMemo\\AccountMemo_EFCore\\AccountMemo_EFCore.csproj",
+      "projectUniqueName": "C:\\Users\\quanna\\source\\repos\\AccountMemo\\AccountMemo_EFCore\\AccountMemo_EFCore.csproj",
       "projectName": "AccountMemo_EFCore",
-      "projectPath": "C:\\Users\\quanna\\Source\\Repos\\AccountMemo\\AccountMemo_EFCore\\AccountMemo_EFCore.csproj",
+      "projectPath": "C:\\Users\\quanna\\source\\repos\\AccountMemo\\AccountMemo_EFCore\\AccountMemo_EFCore.csproj",
       "packagesPath": "C:\\Users\\quanna\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\quanna\\Source\\Repos\\AccountMemo\\AccountMemo_EFCore\\obj\\",
+      "outputPath": "C:\\Users\\quanna\\source\\repos\\AccountMemo\\AccountMemo_EFCore\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\DevExpress 21.1\\Components\\Offline Packages",
@@ -2938,8 +2938,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\quanna\\Source\\Repos\\AccountMemo\\AccountMemo_Domain\\AccountMemo_Domain.csproj": {
-              "projectPath": "C:\\Users\\quanna\\Source\\Repos\\AccountMemo\\AccountMemo_Domain\\AccountMemo_Domain.csproj"
+            "C:\\Users\\quanna\\source\\repos\\AccountMemo\\AccountMemo_Domain\\AccountMemo_Domain.csproj": {
+              "projectPath": "C:\\Users\\quanna\\source\\repos\\AccountMemo\\AccountMemo_Domain\\AccountMemo_Domain.csproj"
             }
           }
         }

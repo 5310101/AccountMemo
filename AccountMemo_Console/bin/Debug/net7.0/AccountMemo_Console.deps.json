@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v7.0": {
       "AccountMemo_Console/1.0.0": {
         "dependencies": {
+          "AccountMemo_Domain": "1.0.0",
           "AccountMemo_EFCore": "1.0.0",
           "Microsoft.Extensions.Configuration": "7.0.0",
           "Microsoft.Extensions.Hosting": "7.0.1"
@@ -831,8 +832,14 @@
           }
         }
       },
+      "AccountMemo_Domain/1.0.0": {
+        "runtime": {
+          "AccountMemo_Domain.dll": {}
+        }
+      },
       "AccountMemo_EFCore/1.0.0": {
         "dependencies": {
+          "AccountMemo_Domain": "1.0.0",
           "Microsoft.EntityFrameworkCore": "7.0.11",
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.11"
         },
@@ -1358,6 +1365,11 @@
       "sha512": "sha512-IXoJOXIqc39AIe+CIR7koBtRGMiCt/LPM3lI+PELtDIy9XdyeSrwXFdWV9dzJ2Awl0paLWUaknLxFQ5HpHZUog==",
       "path": "system.windows.extensions/6.0.0",
       "hashPath": "system.windows.extensions.6.0.0.nupkg.sha512"
+    },
+    "AccountMemo_Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "AccountMemo_EFCore/1.0.0": {
       "type": "project",

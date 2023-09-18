@@ -21,7 +21,7 @@ namespace AccountMemo_EFCore.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("AccountMemo_EFCore.Models.Account", b =>
+            modelBuilder.Entity("AccountMemo_Domain.Models.Account", b =>
                 {
                     b.Property<int>("Id")
                         .HasColumnType("int")
@@ -46,7 +46,7 @@ namespace AccountMemo_EFCore.Migrations
                     b.ToTable("Account", (string)null);
                 });
 
-            modelBuilder.Entity("AccountMemo_EFCore.Models.UserStore", b =>
+            modelBuilder.Entity("AccountMemo_Domain.Models.UserStore", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -74,9 +74,9 @@ namespace AccountMemo_EFCore.Migrations
                     b.ToTable("UserStore", (string)null);
                 });
 
-            modelBuilder.Entity("AccountMemo_EFCore.Models.Account", b =>
+            modelBuilder.Entity("AccountMemo_Domain.Models.Account", b =>
                 {
-                    b.HasOne("AccountMemo_EFCore.Models.UserStore", "User")
+                    b.HasOne("AccountMemo_Domain.Models.UserStore", "User")
                         .WithMany("Accounts")
                         .HasForeignKey("Id")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -86,7 +86,7 @@ namespace AccountMemo_EFCore.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("AccountMemo_EFCore.Models.UserStore", b =>
+            modelBuilder.Entity("AccountMemo_Domain.Models.UserStore", b =>
                 {
                     b.Navigation("Accounts");
                 });

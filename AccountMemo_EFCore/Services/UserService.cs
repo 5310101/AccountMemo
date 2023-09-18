@@ -22,7 +22,7 @@ namespace AccountMemo_EFCore.Services
         {
             using (AccountMemoContext context = _contextFactory.CreateDbContext())
             {
-                UserStore entity = await context.UserStores.FirstOrDefaultAsync(x => x.Id == Id) ;
+                UserStore entity = await context.UserStores.FirstOrDefaultAsync(x => x.Id == Id);
                 return entity;
             }
         }
@@ -32,10 +32,18 @@ namespace AccountMemo_EFCore.Services
             using (AccountMemoContext context = _contextFactory.CreateDbContext())
             {
                 IEnumerable<UserStore> entity = await context.UserStores.
-                    Include(x => x.Id).
-                    Include(x => x.Name).
                     Include(x => x.Accounts).ToListAsync(); 
                 return entity;  
+            }
+        }
+
+        public async Task<IEnumerable<UserStore>> GetUserByName(string name)
+        {
+            using (AccountMemoContext context = _contextFactory.CreateDbContext())
+            {
+                IEnumerable<UserStore> entity = await context.UserStores.Where(x => x.Name == name).
+                    Include(x => x.Accounts).ToListAsync();
+                return entity;
             }
         }
     }
