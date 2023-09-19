@@ -22,7 +22,7 @@ namespace AccountMemo_EFCore.Services
         {
             using (AccountMemoContext context = _contextFactory.CreateDbContext())
             {
-                UserStore entity = await context.UserStores.FirstOrDefaultAsync(x => x.Id == Id);
+                UserStore entity = await context.UserStores.Include(x => x.Accounts).FirstOrDefaultAsync(x => x.Id == Id);
                 return entity;
             }
         }

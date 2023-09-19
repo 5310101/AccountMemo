@@ -55,7 +55,7 @@ namespace AccountMemo_Console
             {
                 if (isSuccess == false)
                 {
-                    "Cannot update user.".Error_Display();
+                    "Cannot update.".Error_Display();
                 }
                 else
                 {
@@ -66,11 +66,22 @@ namespace AccountMemo_Console
             {
                 if (isSuccess == false)
                 {
-                    "Cannot delete user.".Error_Display();
+                    "Cannot delete.".Error_Display();
                 }
                 else
                 {
-                    "delete user successfully.".Normal_Display();
+                    "deleted successfully.".Normal_Display();
+                }
+            }
+            if (infoType == InfoType.CreateFunction)
+            {
+                if (isSuccess == false)
+                {
+                    "Cannot create.".Error_Display();
+                }
+                else
+                {
+                    "Created successfully.".Normal_Display();
                 }
             }
         }

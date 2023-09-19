@@ -15,16 +15,16 @@ namespace AccountMemo_EFCore.ModelMap_CreateTable
         public void Configure(EntityTypeBuilder<UserStore> modelBuilder)
         {
 
-            modelBuilder.HasKey(e => e.Id).HasName("PK__UserStro__3213E83F5847BD50");
+            //modelBuilder.HasKey(e => e.Id).HasName("PK__UserStro__3213E83F5847BD50");
 
-            modelBuilder.ToTable("UserStore");
+            //modelBuilder.ToTable("UserStore");
 
-            modelBuilder.Property(e => e.Id).HasColumnName("id");
-            modelBuilder.Property(e => e.AppPassword)
-                    .HasMaxLength(200)
-                    .IsUnicode(false)
-                    .HasColumnName("App_Password");
-            modelBuilder.Property(e => e.Name).HasMaxLength(200);
+            //modelBuilder.Property(e => e.Id).HasColumnName("id");
+            //modelBuilder.Property(e => e.AppPassword)
+            //        .HasMaxLength(200)
+            //        .IsUnicode(false)
+            //        .HasColumnName("App_Password");
+            //modelBuilder.Property(e => e.Name).HasMaxLength(200);
         }
     }
 }

@@ -3,9 +3,8 @@ using System.Collections.Generic;
 
 namespace AccountMemo_Domain.Models;
 
-public partial class UserStore : BaseModel
+public class UserStore : BaseModel
 {
-
     public string? Name { get; set; }
     public int Age { get; set; }
 

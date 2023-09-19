@@ -7,10 +7,11 @@ using System.Threading.Tasks;
 
 namespace AccountMemo_Domain.Services
 {
-    public interface IAccountService
+    public interface IAccountService : IDataService<Account>
     {
         Task<IEnumerable<Account>> GetAllAccount(int userId);
-        Task<Account> GetAccountById(int AccountId);
+        Task<Account> GetAccount(int userId);   
         Task<IEnumerable<Account>> GetAccountByName(string Name);
+        public Task<bool> CreateAccountOfUser(int userId, Account account);
     }
 }

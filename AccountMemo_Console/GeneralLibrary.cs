@@ -29,7 +29,7 @@ namespace AccountMemo_Console
                 "List User: ".Title_Display();
                 foreach (UserStore userStore in listUser)
                 {
-                    $"[Id{userStore.Id}]  Name: [{userStore.Name}]  Age:[{userStore.Age}]".Normal_Display();
+                    $"[{userStore.Id}]  Name: [{userStore.Name}]  Age:[{userStore.Age}]".Normal_Display();
                 }
             }
             catch (Exception ex)
@@ -46,18 +46,30 @@ namespace AccountMemo_Console
 
         public async Task ShowUser(int id)
         {
-            UserStore user = await _userService.GetUser(id);
-            if(user == null)
+            try
             {
-                "Not existed user".Error_Display();
-            }
-            else
-            {
-                $"[{user.Id}] {user.Name}  {user.Age}".Normal_Display();
-                foreach (Account account in user.Accounts)
+                UserStore user = await _userService.GetUser(id);
+                if (user == null)
                 {
-                    $"User name: {account.Username}  Password: {account.Password}  Account Type: {account.AccountType}".Normal_Display();
+                    "Not existed user".Error_Display();
                 }
+                else
+                {
+                    $"[{user.Id}] {user.Name}  {user.Age}".Normal_Display();
+                    if (user.Accounts == null)
+                    {
+                        return;
+                    }
+                    foreach (Account account in user.Accounts)
+                    {
+                        $"[{account.Id}] User name: {account.Username}  Password: {account.Password}  Account Type: {account.AccountType}".Normal_Display();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception(ex.Message);
             }
         }
 
@@ -84,13 +96,65 @@ namespace AccountMemo_Console
             "Get user Id:".Title_Display();
             foreach (UserStore user in users)
             {
-                $"[Id{user.Id}]  Name: [{user.Name}]  Age:[{user.Age}]".Normal_Display();
+                $"[{user.Id}]  Name: [{user.Name}]  Age:[{user.Age}]".Normal_Display();
             }
         }
 
         public async Task<bool> DeleteUser(int id)
         {
             return await _userService.Delete(id);   
+        }
+
+        public async Task ShowAllAccountOfUser(int userid)
+        {
+            IEnumerable<Account> accounts = await _accountService.GetAllAccount(userid);
+            if(accounts.Count() == 0)
+            {
+                $"User Id {userid} cannot be found or has no account.".Error_Display();
+                return;
+            }
+            else
+            {
+                foreach (Account account in accounts) 
+                {
+                    $"[{account.Id}] {account.Username}  {account.AccountType} {account.Password}".Normal_Display();
+                }
+            }
+        }
+
+        public async Task<bool> CreateAccount(int userId, Account account)
+        {
+            try
+            {
+                return await _accountService.CreateAccountOfUser(userId, account);
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception(ex.Message);
+            }
+        }
+
+        public async Task ShowAccount(int accountId)
+        {
+            Account account = await _accountService.GetAccount(accountId);
+            $"[{account.Id} {account.Username}  {account.AccountType}]".Normal_Display();
+        }
+
+        public async Task<bool> DeleteAccount(int id)
+        {
+            bool isSuccess = await _accountService.Delete(id);
+            return isSuccess;
+        }
+
+        public async Task<Account> GetAccountToUpdate(int id)
+        {
+            return await _accountService.GetAccount(id);
+        }
+
+        public async Task<bool> UpdateAccount(int id, Account accountNew)
+        {
+            return await _accountService.Update(id,accountNew);
         }
     }
 }
